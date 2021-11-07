@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!-- This is the calculator page where the user inputs the numbers-->
+<html>
+    <head>
+        <title>Quadratic Formula </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="quadraticFormula.js"></script>
+        <link rel="stylesheet" type="text/css" href="quadraticFormulaStyle.css">
+        
+    </head>
+    <body>
+        <ul class="navBar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutPage.html">About</a></li>
+        </ul>
+        <div>
+            <!-- input the numbers -->
+            <h1 id="quadraticHeader"> Quadratic Formula Calculator!!</h1>
+            <p> Enter an integer for the a, b and c values, hit calculate, and
+                scroll down to find the solutions!</p>
+            <img src="math1.png" alt="Math Picture" width="300" height="300" id="mathPic"> 
+            <form>
+                a:<br>
+                <input id="aValue" type="text" name="aValue"><br>
+                b:<br>
+                <input id="bValue" type="text" name="bValue"><br>
+                c:<br>
+                <input id="cValue" type="text" name="cValue"><br>
+                <!-- calling the function -->
+                
+                <br>
+                <input type="button" id="calculateButton"
+                   onclick="quadraticForm(document.getElementById('aValue').value,
+                               document.getElementById('bValue').value, document.getElementById('cValue').value)"
+                    value="calculate">
+                
+            </form>
+            <p id="answer1"> Solution1: </p>
+            <p id="answer2"> Solution2: </p>
+        </div>
+        <div>
+            <!-- display the terms and solutions -->
+            <p id="values1"> a Value: </p> 
+            <p id="values2"> b Value</p>
+            <p id="values3"> c Value:</p>
+        </div>
+    </body>
+</html>
